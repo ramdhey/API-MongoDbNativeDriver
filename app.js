@@ -13,11 +13,11 @@ app.use(cors());
 app.use(express.json());
 app.use(require('./route'));
 
-// Global error handling
-app.use(function (err, _req, res) {
-  console.error(err.stack);
-  res.send(500).send('Something broke!');
-});
+// // Global error handling
+// app.use(function (err, _req, res) {
+//   console.error(err.stack);
+//   res.status(500).send('Something broke!');
+// });
 
 // perform a database connection when the server starts
 dbo.connectToServer(function (err) {
